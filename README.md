@@ -31,5 +31,16 @@ Proposed frame work is primarily comprises of 3 stages,
 #
 #
 # Detailed Steps
-### Step-1: Validate that passwordless authentication from jump-point to all end-points is working well
-### Step-2: Copy AIXInventory.sh to all AIX end pointh
+Step-1: Validate that passwordless authentication from jump-point to all end-points is working well
+Step-2: Create "Inventory" directory on each point and copy AIXInventory.sh to all AIX end points
+        $ hostname
+        p1263-pvm3
+        $ pwd
+        $
+        $ ls
+        AIXInventory.sh
+        $
+
+
+
+Step-3: Edit crontab to initiate 
