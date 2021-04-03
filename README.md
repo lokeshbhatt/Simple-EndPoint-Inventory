@@ -21,7 +21,9 @@ Proposed frame work is primarily comprises of 3 stages,
 1. Data Generation: End point inventory file generation
 2. Data Gathering: All inventory files are gathered at one place
 3. Data Parsing: Parsing of inventory files to generation single data file
+
 ![Alt text](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/Inventory%20-%20how%20it%20works.JPG "Simple Inventory Collection - Technical Framework")
+#
 #
 #
 # Demonstrated use case
@@ -29,5 +31,5 @@ Proposed frame work is primarily comprises of 3 stages,
 #
 #
 # Detailed Steps
-## Step-1: *Validate that passwordless authentication from jump-point to all end-points is working well*
-## Step-2: Copy AIXInventory.sh to all AIX end pointh
+### Step-1: Validate that passwordless authentication from jump-point to all end-points is working well
+### Step-2: Copy AIXInventory.sh to all AIX end pointh
