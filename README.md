@@ -1,5 +1,5 @@
-# Simple host inventory creation framework
-- This documents details simple hosts inventory creation framework
+# Simple inventory creation framework
+- This documents details simple inventory creation framework
 - Although use case detailed is for AIX operating system, but same can be easily expanded to any end point 
 #
 #
