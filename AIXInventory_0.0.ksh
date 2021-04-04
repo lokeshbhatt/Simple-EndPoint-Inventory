@@ -1,5 +1,9 @@
 #!/usr/bin/ksh
 #
+#OFNAME=`hostname``date +"_%d%m%Y_%H%M"".AIXInventory"`
+OFNAME=`hostname`".AIXInventory"
+ODIR='/home/cecuser/Inventory'				#Change output directory variable to directory of your choice
+#
 aix_commands() {
 cat <<- AIX_COMMANDS
         general,date,normal user
@@ -32,8 +36,7 @@ cat <<- AIX_COMMANDS
 AIX_COMMANDS
 }
 #
-#OFNAME=`hostname``date +"_%d%m%Y_%H%M"".AIXInventory"`
-OFNAME=`hostname`".AIXInventory"
+cd $ODIR
 #
 aix_commands | grep -v "^$" | awk -F "," '{print $2}' | while read line
 	do
