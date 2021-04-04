@@ -22,7 +22,7 @@ Proposed frame work is primarily comprises of 3 stages,
 2. Data Gathering: All inventory files are gathered at one place
 3. Data Parsing: Parsing of inventory files to generation single data file
 
-![Alt text](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/Inventory%20-%20how%20it%20works.JPG "Simple Inventory Collection - Technical Framework")
+![Alt text](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/Inventory%20-%20how%20it%20works.JPG "Simple Inventory Creation - Technical Framework")
 #
 #
 #
@@ -32,7 +32,8 @@ Proposed frame work is primarily comprises of 3 stages,
 #
 # Detailed Steps
 Step-1: Validate that passwordless authentication from jump-point to all end-points is working well
-Step-2: Create "Inventory" directory on each point and copy AIXInventory.sh to all AIX end points
+Step-2: Create "Inventory" directory on each point
+Step-3: Copy "AIXInventory.sh" to all AIX end points
         $ hostname
         p1263-pvm3
         $ pwd
@@ -40,7 +41,5 @@ Step-2: Create "Inventory" directory on each point and copy AIXInventory.sh to a
         $ ls
         AIXInventory.sh
         $
-
-
 
 Step-3: Edit crontab to initiate 
