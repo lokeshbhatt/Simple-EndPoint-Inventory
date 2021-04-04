@@ -25,21 +25,50 @@ Proposed frame work is primarily comprises of 3 stages,
 ![Alt text](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/Inventory%20-%20how%20it%20works.JPG "Simple Inventory Creation - Technical Framework")
 #
 #
-#
 # Demonstrated use case
 - AIX inventory creation
 #
 #
 # Detailed Steps
-## Step-1: Validate that passwordless authentication from jump-point to all end-points is working well
-## Step-2: Create "Inventory" directory on each point
-## Step-3: Copy "AIXInventory.sh" to all AIX end points
-        $ hostname
-        p1263-pvm3
+## End-point
+- login with non-priveledg user (cecuser in case of example below)
+- Create "Inventory" directory on each point
+- Change to "Inventory directory"
+        $ cd /home/cecuser/Inventory
+- Copy "AIXInventory.sh" to all AIX end points
         $ pwd
-        $
+        /home/cecuser/Inventory
         $ ls
         AIXInventory.sh
         $
+- Edit crontab (crontab -e) to include following entry
+        00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.
+#
+## Central jumppoint
+- Validate passwordless authentication from jump-point to all end-points
+- Create & change to "Inventory" directory
+- Create "hostlist" file (Single with hostname or IP addresses in each line without any spaces)
+      $ cat hostlist
+      p1263-pvm1
+      p1263-pvm2
+      p1263-pvm3
+      $
+- Copy "PullInventory-0.0.sh" to "Inventory" directory
+- Copy "CollateInventory-0.0.py" to "Inventory" directory
+    $ pwd
+    /home/cecuser/Inventory
+    $ ls
+    AIXInventory.sh          CollateInventory-0.0.py  PullInventory-0.0.sh     hostlist
+    $
+- Edit crontab (crontab -e) to include following entries,
+    00 01 * * * /home/cecuser/Inventory/PullInventory-0.0.sh
+    00 02 * * * /home/cecuser/Inventory/CollateInventory-0.0.py
+#
+#
+#
+    
 
-Step-3: Edit crontab to initiate 
+        
+        
+      
+
