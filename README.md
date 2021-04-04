@@ -33,31 +33,31 @@ Proposed frame work is primarily comprises of 3 stages,
 ## End-point
 - login with non-privileged user (cecuser in case of example below)
 - Create "Inventory" directory on each end point
-- Change to "Inventory" directory
-        $ cd /home/cecuser/Inventory
+- Change to "Inventory" directory  
+        $ cd /home/cecuser/Inventory  
 - Copy "AIXInventory.sh" to all AIX end points
-        $ pwd
-        /home/cecuser/Inventory
-        $ ls
-        AIXInventory.sh
+        $ pwd  
+        /home/cecuser/Inventory  
+        $ ls  
+        AIXInventory.sh  
 - Edit crontab (crontab -e) to include following entry
         00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.
 #
 ## Central jumppoint
-- Download & install "python"
-      $ curl -o aixtools.python.py36.3.6.12.0.I http://download.aixtools.net/tools/aixtools.python.py36.3.6.12.0.I
-      $ su - 
-      # installp -d aixtools.python.py36.3.6.12.0.I -a all
-      # exit
-      $ /opt/bin/python3.6 --version
-      Python 3.6.12
+- Download & install "python"  
+      $ curl -o aixtools.python.py36.3.6.12.0.I http://download.aixtools.net/tools/aixtools.python.py36.3.6.12.0.I  
+      $ su -   
+      # installp -d aixtools.python.py36.3.6.12.0.I -a all  
+      # exit  
+      $ /opt/bin/python3.6 --version  
+      Python 3.6.12  
 - Validate passwordless authentication from jump-point to all end-points
 - Create & change to "Inventory" directory
-- Create "hostlist" file (Single with hostname or IP addresses in each line without any spaces)
-      $ cat hostlist
-      p1263-pvm1
-      p1263-pvm2
-      p1263-pvm3
+- Create "hostlist" file (Single with hostname or IP addresses in each line without any spaces)  
+      $ cat hostlist  
+      p1263-pvm1  
+      p1263-pvm2  
+      p1263-pvm3  
 - Copy "PullInventory-0.0.sh" to "Inventory" directory
 - Copy "CollateInventory-0.0.py" to "Inventory" directory
     $ pwd
