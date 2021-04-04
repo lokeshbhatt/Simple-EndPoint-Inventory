@@ -58,15 +58,15 @@ Proposed frame work is primarily comprises of 3 stages,
       p1263-pvm1  
       p1263-pvm2  
       p1263-pvm3  
-- Copy "PullInventory-0.0.sh" to "Inventory" directory
-- Copy "CollateInventory-0.0.py" to "Inventory" directory
-    $ pwd
-    /home/cecuser/Inventory
-    $ ls
-    AIXInventory.sh          CollateInventory-0.0.py  PullInventory-0.0.sh     hostlist
-- Edit crontab (crontab -e) to include following entries,
-    00 01 * * * /home/cecuser/Inventory/PullInventory-0.0.sh
-    00 02 * * * /home/cecuser/Inventory/CollateInventory-0.0.py
+- Copy "PullInventory-0.0.sh" to "Inventory" directory  
+- Copy "CollateInventory-0.0.py" to "Inventory" directory  
+    $ pwd  
+    /home/cecuser/Inventory  
+    $ ls  
+    AIXInventory.sh          CollateInventory-0.0.py  PullInventory-0.0.sh     hostlist  
+- Edit crontab (crontab -e) to include following entries,  
+    00 01 * * * /home/cecuser/Inventory/PullInventory-0.0.sh  
+    00 02 * * * /home/cecuser/Inventory/CollateInventory-0.0.py  
 #
 #
 # Downloads
