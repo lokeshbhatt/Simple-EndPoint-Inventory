@@ -40,11 +40,17 @@ Proposed frame work is primarily comprises of 3 stages,
         /home/cecuser/Inventory
         $ ls
         AIXInventory.sh
-        $
 - Edit crontab (crontab -e) to include following entry
         00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.
 #
 ## Central jumppoint
+- Download & install "python"
+      $ curl -o aixtools.python.py36.3.6.12.0.I http://download.aixtools.net/tools/aixtools.python.py36.3.6.12.0.I
+      $ su - 
+      # installp -d aixtools.python.py36.3.6.12.0.I -a all
+      # exit
+      $ /opt/bin/python3.6 --version
+      Python 3.6.12
 - Validate passwordless authentication from jump-point to all end-points
 - Create & change to "Inventory" directory
 - Create "hostlist" file (Single with hostname or IP addresses in each line without any spaces)
@@ -52,28 +58,19 @@ Proposed frame work is primarily comprises of 3 stages,
       p1263-pvm1
       p1263-pvm2
       p1263-pvm3
-      $
 - Copy "PullInventory-0.0.sh" to "Inventory" directory
 - Copy "CollateInventory-0.0.py" to "Inventory" directory
     $ pwd
     /home/cecuser/Inventory
     $ ls
     AIXInventory.sh          CollateInventory-0.0.py  PullInventory-0.0.sh     hostlist
-    $
 - Edit crontab (crontab -e) to include following entries,
     00 01 * * * /home/cecuser/Inventory/PullInventory-0.0.sh
     00 02 * * * /home/cecuser/Inventory/CollateInventory-0.0.py
 #
 #
-#Downloads
+# Downloads
 - [AIXInventory.sh](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/AIXInventory_0.0.ksh)
 - [PullInventory-0.0.sh](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/PullInventory-0.0.sh)
 - [CollateInventory-0.0.py](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory)
-
-- 
-    
-
-        
-        
-      
-
+- [aixtools.python.py36.3.6.12.0.I](http://download.aixtools.net/tools/aixtools.python.py36.3.6.12.0.I)
