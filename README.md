@@ -31,9 +31,9 @@ Proposed frame work is primarily comprises of 3 stages,
 #
 # Detailed Steps
 ## End-point
-- login with non-priveledg user (cecuser in case of example below)
-- Create "Inventory" directory on each point
-- Change to "Inventory directory"
+- login with non-privileged user (cecuser in case of example below)
+- Create "Inventory" directory on each end point
+- Change to "Inventory" directory
         $ cd /home/cecuser/Inventory
 - Copy "AIXInventory.sh" to all AIX end points
         $ pwd
@@ -65,7 +65,12 @@ Proposed frame work is primarily comprises of 3 stages,
     00 02 * * * /home/cecuser/Inventory/CollateInventory-0.0.py
 #
 #
-#
+#Downloads
+- [AIXInventory.sh](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/AIXInventory_0.0.ksh)
+- [PullInventory-0.0.sh](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/PullInventory-0.0.sh)
+- [CollateInventory-0.0.py](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory)
+
+- 
     
 
         
