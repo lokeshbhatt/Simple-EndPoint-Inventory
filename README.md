@@ -11,7 +11,7 @@
 # Requirements
 - A central jump-point server/workstation with network reachability to end points
 - Password less SSH configuration from central jump-point to end points
-  -- Non-privileged user is fine
+  -- Non-privileged user is fine  
 - ksh at each AIX end point
 - Python v3.6 at jump point server
 #
@@ -32,18 +32,18 @@ Proposed frame work is primarily comprises of 3 stages,
 #
 #
 # Detailed Steps
-## End-point
-- login with non-privileged user (cecuser in case of example below)
-- Create "Inventory" directory on each end point
+## End-point  
+- login with non-privileged user (cecuser in case of example below)  
+- Create "Inventory" directory on each end point  
 - Change to "Inventory" directory  
         $ cd /home/cecuser/Inventory  
-- Copy "AIXInventory.sh" to all AIX end points
+- Copy "AIXInventory.sh" to all AIX end points  
         $ pwd  
         /home/cecuser/Inventory  
         $ ls  
         AIXInventory.sh  
 - Edit crontab (crontab -e) to include following entry
-        00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.
+        00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.  
 #
 ## Central jumppoint
 - AIX based central jumppoint is considered
