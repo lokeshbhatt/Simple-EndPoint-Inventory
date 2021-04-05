@@ -81,5 +81,5 @@ Proposed frame work is primarily comprises of 3 stages,
 # Downloads
 - [AIXInventory.sh](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/AIXInventory_0.0.ksh)
 - [PullInventory-0.0.sh](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/PullInventory-0.0.sh)
-- [CollateInventory-0.0.py](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory)
+- [CollateInventory-0.0.py](https://github.com/lokeshbhatt/Simple-EndPoint-Inventory/blob/main/CollateInventory-0.0.py)
 - [aixtools.python.py36.3.6.12.0.I](http://download.aixtools.net/tools/aixtools.python.py36.3.6.12.0.I)
