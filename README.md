@@ -42,7 +42,7 @@ Proposed frame work is primarily comprises of 3 stages,
         /home/cecuser/Inventory  
         $ ls  
         AIXInventory.sh  
-- Edit crontab (crontab -e) to include following entry
+- Edit crontab (crontab -e) to include following entry  
         00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.  
 #
 ## Central jumppoint
