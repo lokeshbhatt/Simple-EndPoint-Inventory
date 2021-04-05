@@ -70,6 +70,7 @@ Proposed frame work is primarily comprises of 3 stages,
     $ ls  
     AIXInventory.sh          CollateInventory-0.0.py  PullInventory-0.0.sh     hostlist  
 - Edit crontab (crontab -e) to include following entries,  
+    00 00 * * * /home/cecuser/Inventory/AIXInventory.sh  
     00 01 * * * /home/cecuser/Inventory/PullInventory-0.0.sh  
     00 02 * * * /home/cecuser/Inventory/CollateInventory-0.0.py  
 - Refer output file "Inventory_DD_MM_YYYY"
