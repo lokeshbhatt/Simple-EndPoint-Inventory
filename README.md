@@ -42,7 +42,7 @@ Proposed frame work is primarily comprises of 3 stages,
         /home/cecuser/Inventory  
         $ ls  
         AIXInventory.sh  
-  **NOTE** - Please update "ODIR" variable in shell script to reflect output directory of your choice  
+  **NOTE** - Please update "ODIR" variable to reflect output directory of your choice  
 - Edit crontab (crontab -e) to include following entry  
         00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.  
 #
@@ -66,7 +66,7 @@ Proposed frame work is primarily comprises of 3 stages,
       p1263-pvm3  
 - Copy "PullInventory-0.0.sh" to "Inventory" directory  
 - Copy "CollateInventory-0.0.py" to "Inventory" directory  
-  **NOTE** - Please update "ODIR" variable in shell script to reflect output directory of your choice  
+  **NOTE** - Please update "ODIR" & "IDIR" variable to reflect output directory of your choice  
     $ pwd  
     /home/cecuser/Inventory  
     $ ls  
