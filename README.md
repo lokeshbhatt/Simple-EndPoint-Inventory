@@ -27,6 +27,8 @@ Proposed frame work is primarily comprises of 3 stages,
 #
 # Demonstrated use case
 - AIX inventory creation
+- AIX based central jump point server
+- AIX based end points / LPARs
 #
 #
 # Detailed Steps
@@ -44,13 +46,16 @@ Proposed frame work is primarily comprises of 3 stages,
         00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.
 #
 ## Central jumppoint
-- Download & install "python"  
+- AIX based central jumppoint is considered
+- Install "python" and reuired libraries  
       $ curl -o aixtools.python.py36.3.6.12.0.I http://download.aixtools.net/tools/aixtools.python.py36.3.6.12.0.I  
       $ su -   
       # installp -d aixtools.python.py36.3.6.12.0.I -a all  
-      # exit  
-      $ /opt/bin/python3.6 --version  
-      Python 3.6.12  
+      # opt/bin/python3.6 --version  
+      Python 3.6.12 
+      # /opt/bin/pip3 install --upgrade pip  
+      # /opt/bin/pip3 install xlsxwriter  
+      # exit    
 - Validate passwordless authentication from jump-point to all end-points
 - Create & change to "Inventory" directory
 - Create "hostlist" file (Single with hostname or IP addresses in each line without any spaces)  
@@ -67,6 +72,7 @@ Proposed frame work is primarily comprises of 3 stages,
 - Edit crontab (crontab -e) to include following entries,  
     00 01 * * * /home/cecuser/Inventory/PullInventory-0.0.sh  
     00 02 * * * /home/cecuser/Inventory/CollateInventory-0.0.py  
+- Refer output file "Inventory_DD_MM_YYYY"
 #
 #
 # Downloads
