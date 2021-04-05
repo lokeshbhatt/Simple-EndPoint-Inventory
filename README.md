@@ -43,7 +43,7 @@ Proposed frame work is primarily comprises of 3 stages,
         $ ls  
         AIXInventory.sh
 - Change file permission  
-        $ chmod u+x AIXInventory.sh
+        $ chmod u+x AIXInventory.sh  
   **NOTE** - Please update "ODIR" variable to reflect output directory of your choice  
 - Edit crontab (crontab -e) to include following entry  
         00 00 * * * /home/cecuser/Inventory/AIXInventory.sh      #This initiates inventory data collection every mid night 0000 Hrs.  
