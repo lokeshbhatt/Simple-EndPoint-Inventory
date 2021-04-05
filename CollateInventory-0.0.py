@@ -21,7 +21,8 @@ import datetime
 #########################################################################
 #
 #
-ODIR="/home/cecuser/Inventory"
+IDIR="/home/cecuser/Inventory"                  # Directory where end point inventory files are kept
+ODIR="/home/cecuser/Inventory"                  # Directory where output files is to be kept
 
 def PrepareInventoryFilesList() :
     if len(os.listdir()) == 0 :
@@ -197,7 +198,9 @@ def main():
         ToolName = ToolName.replace(".py","")
     elif ".exe" in ToolName:
         ToolName = ToolName.replace(".exe","")
-
+    
+    os.chdir(IDIR)
+    
     CSVFileName = ToolName + ".csv"
     InventoryFileList = PrepareInventoryFilesList()
     Inv=ProcessListFile(InventoryFileList)
