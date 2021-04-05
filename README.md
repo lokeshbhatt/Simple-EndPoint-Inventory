@@ -54,8 +54,8 @@ Proposed frame work is primarily comprises of 3 stages,
       $ curl -o aixtools.python.py36.3.6.12.0.I http://download.aixtools.net/tools/aixtools.python.py36.3.6.12.0.I  
       $ su -   
       # installp -d aixtools.python.py36.3.6.12.0.I -a all  
-      # opt/bin/python3.6 --version   
-      Python 3.6.12 
+      # opt/bin/python3.6 --version    
+      Python 3.6.12  
       # /opt/bin/pip3 install --upgrade pip  
       # /opt/bin/pip3 install xlsxwriter  
       # exit    
