@@ -48,7 +48,7 @@ Proposed frame work is primarily comprises of 3 stages,
 #
 ## Central jumppoint
 - AIX based central jumppoint is considered
-- Install "python" and reuired libraries  
+- Install "python" and required libraries  
       $ curl -o aixtools.python.py36.3.6.12.0.I http://download.aixtools.net/tools/aixtools.python.py36.3.6.12.0.I  
       $ su -   
       # installp -d aixtools.python.py36.3.6.12.0.I -a all  
