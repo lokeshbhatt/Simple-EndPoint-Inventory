@@ -2,7 +2,7 @@
 #
 #OFNAME=`hostname``date +"_%d%m%Y_%H%M"".AIXInventory"`
 OFNAME=`hostname`".AIXInventory"
-ODIR='/home/cecuser/Inventory'				#Change output directory variable to directory of your choice
+ODIR='/home/cecuser/Inventory'                          #Change output directory variable to directory of your choice
 #
 aix_commands() {
 cat <<- AIX_COMMANDS
@@ -37,19 +37,20 @@ AIX_COMMANDS
 }
 #
 cd $ODIR
+cat /dev/null > $OFNAME
 #
 aix_commands | grep -v "^$" | awk -F "," '{print $2}' | while read line
-	do
+        do
 #
-	CM=`echo $line | tr "_" " "`
-#	
-	printf "\nSTART\n" > TempCommandOutput
-	eval $CM >> TempCommandOutput 2>&1
-	printf "\nEND\n" >> TempCommandOutput
-	sed -e "s/^/$line,/" TempCommandOutput >> $OFNAME
+        CM=`echo $line | tr "_" " "`
 #
-	if [ -f TempCommandOutput ];then
+        printf "\nSTART\n" > TempCommandOutput
+        eval $CM >> TempCommandOutput 2>&1
+        printf "\nEND\n" >> TempCommandOutput
+        sed -e "s/^/$line,/" TempCommandOutput >> $OFNAME
+#
+        if [ -f TempCommandOutput ];then
                 rm TempCommandOutput
         fi
 #
-	done
+        done
