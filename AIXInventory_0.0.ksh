@@ -7,6 +7,7 @@ ODIR='/home/cecuser/Inventory'                          #Change output directory
 aix_commands() {
 cat <<- AIX_COMMANDS
         general,date,normal user
+        general,uptime, normal user
         os,hostname,normal user
         os,uname_-aM,normal user
         os,oslevel_-s,normal user
@@ -29,6 +30,9 @@ cat <<- AIX_COMMANDS
         storage,lsvg,normal luser
         storage,lsvg_-o,normal user
         storage,lsfs,normal user
+        storage,lsvg_-o_|_xargs_lsvg_-l,normal user             #NEW
+        storage,lsvg_-o_|_xargs_lsvg_-p,normal user             #NEW
+        storage,lspv_-u,normal user
         storage,df,normal user
         storage,df_-g,normal user
         virtual,echo_cvai_|_kdb,root user
